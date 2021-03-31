@@ -1,6 +1,6 @@
 # Cisliconastroje-VSVU_2021
 
-Király: Úvod do vytvárania vlastných hudobných nástrojov
+Király: Stručný úvod do programovania vlastných hudobných nástrojov
 VŠMU, Bratislava
 
 V tomto kurze si ukážeme ako sa dá používať počítač v 21. storočí na zvukovo-hudobných programoch v jazyku SuperCollider.
@@ -21,6 +21,6 @@ Teším sa na stretnutie.
 dátumy
 ------
 
-- [ ] [1apríl 09oo-12oo] - I.
-- [ ] [8apríl 09oo-12oo] - II.
-- [ ] [15apríl 09oo-12oo] - III.
+- [ ] [1. apríl 09oo-12oo] - I.
+- [ ] [8. apríl 09oo-12oo] - II.
+- [ ] [15. apríl 09oo-12oo] - III.
