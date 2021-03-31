@@ -20,6 +20,8 @@ EDIT: Pripravte si počítač s ľubovoľným OS /Linux, MacOS, WIn/ s nainštal
 
 Teším sa na stretnutie.
 
+Fero Király
+
 
 
 dátumy
