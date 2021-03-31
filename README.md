@@ -16,7 +16,7 @@ Javascript, python, puredata, supercollider, ruby, c, c++, go, rust, nie sú ná
 
 Na tomto mieste nájdete kódy z jednotlivých dní.
 
-EDIT: Pripravte si počítač s ľubovoľným OS /Linux, MacOS, WIn/ s nainštalovaným [SuperColliderom](https://supercollider.github.io) /je to opensource/ a slúchadla.
+EDIT: Pripravte si počítač s ľubovoľným OS /Linux, MacOS, WIn/ s nainštalovaným [SuperColliderom](https://supercollider.github.io) /je to opensource/ a slúchadla (ideálne aj mikrofón).
 
 Teším sa na stretnutie.
 
