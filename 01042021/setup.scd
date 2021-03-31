@@ -13,6 +13,9 @@
 ~t1 = " ";
 ~t2 = " ";
 
+Tdef(\a).play;
+Tdef(\b).play;
+
 Tdef(\a,{
 	loop{
 		~t1.do({ |i|
