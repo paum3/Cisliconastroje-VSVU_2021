@@ -1,6 +1,7 @@
-# Ćísliconástroje pre VŠVU
+# Čísliconástroje pre VŠVU
 
 Király: Stručný úvod do programovania vlastných hudobných nástrojov
+
 VŠMU, Bratislava
 
 V tomto kurze si ukážeme ako sa dá používať počítač v 21. storočí na zvukovo-hudobných programoch v jazyku SuperCollider.
