@@ -1,4 +1,4 @@
-# Cisliconastroje-VSVU_2021
+# Ćísliconástroje pre VŠVU
 
 Király: Stručný úvod do programovania vlastných hudobných nástrojov
 VŠMU, Bratislava
