@@ -13,6 +13,9 @@ a jeho možností.
 
 Javascript, python, puredata, supercollider, ruby, c, c++, go, rust, nie sú názvy reštaurácií kam prídete na hotové jedlo, ale sú to kuchyne, kde si môžete navariť svoje jedlo. Musíte ale vedieť variť.
 
+Na tomto mieste nájdete kódy z jednotlivých dní.
+Teším sa na stretnutie.
+
 
 
 dátumy
