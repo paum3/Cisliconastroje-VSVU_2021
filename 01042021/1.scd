@@ -1,18 +1,46 @@
 
 
+
+
+
 s.boot; // boot server
 
-"setup.scd".loadRelative
+"setup.scd".loadRelative  // cely program je dnu
+
+
+~cas1 = 0.1
 
 
 
+~a = "kdflkjgl  ";
+~b = " i i i i i ";
 
+~a ++ ~b 
+
+~t1 = ~a ++ ~a ++ ~b // concatenation
+~t1 = ~a ++ ~b  ++ ~b // concatenation
+
+~t1 = "dlkfjg  " ++ "dfkjl "
+
+String
+
+~t1 = "i"
 //-----012345679abcde
 ~t1 = "a b a a d f e "
 ~t1 = "ijklmnopqrstuv"
 ~t1 = " " // ticho
 ~t1 = "a b a a d fae "
 ~t1 = "a b a aad fae "
+
+~t1 = "a r a aad fae "
+
+~t1 = "b sadfl hp dfasidhf odif  "
+
+~cas1 = 0.1
+
+
+
+
 
 
 Tdef(\player1).stop
@@ -32,8 +60,43 @@ Tdef(\player1).stop
 
 ~t2 = " aba    h     "
 
-~cas2 = 0.1
+~cas1 = 0.1
 ~cas2 = 0.2
 
 Tdef(\player2).play
 Tdef(\player2).stop
+
+
+
+
+
+
+
+
+
+~t1 = "a      bd      ac      b      "
+~t2 = " a      b       a       b     "
+~cas = 0.01; ~cas2=0.01
+
+ a      b       a       b
+  a      b       a       b
+aaa    bbb     aaa     bbb
+
+
+
+Tdef(\player1).stop
+Tdef(\player2).stop
+
+Tdef(\player1).play
+Tdef(\player2).play
+
+
+~t1 = " a b"
+
+~t2 = "ab"
+
+
+
+
+
+

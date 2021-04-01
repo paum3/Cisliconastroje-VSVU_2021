@@ -27,6 +27,6 @@ fero király
 dátumy
 ------
 
-- [ ] [1. apríl 09oo-12oo] - I.
+- [x] [1. apríl 09oo-12oo] - I.
 - [ ] [8. apríl 09oo-12oo] - II.
 - [ ] [15. apríl 09oo-12oo] - III.
