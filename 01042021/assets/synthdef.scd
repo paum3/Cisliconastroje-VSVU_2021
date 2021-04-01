@@ -4,8 +4,6 @@
 
 
 /* asstes/synthdef.scd */
-Tdef(\player1).stop
-Tdef(\player1).play
 (
 
 SynthDef(\sincu, {

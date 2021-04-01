@@ -76,22 +76,3 @@
 // 				if(i.ascii != 32, { Synth(\sincu, [\freq, a * 50, \release, 1,\amp, a.reciprocal]) });
 // 				~cas1.wait;
 // 			});
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
