@@ -2,7 +2,7 @@
 
 Király: Stručný úvod do programovania vlastných hudobných nástrojov
 
-VŠMU, Bratislava
+VŠVU, Bratislava
 
 V tomto kurze si ukážeme ako sa dá používať počítač v 21. storočí na zvukovo-hudobných programoch v jazyku SuperCollider.
 Počítač vie byť silný nástroj s takmer neobmedzenými možnosťami a dokáže spraviť to čo chceme - ak ho vieme naprogramovať.
@@ -20,7 +20,7 @@ EDIT: Pripravte si počítač s ľubovoľným OS /Linux, MacOS, WIn/ s nainštal
 
 Teším sa na stretnutie.
 
-Fero Király
+fero király
 
 
 
