@@ -2,31 +2,22 @@
 
 
 
-
+//-- inicializacia ----------------------------------------------------//
 s.boot; // boot server
 
 "setup.scd".loadRelative  // cely program je dnu
 
+//---------------------------------------------------------------------//
 
-~cas1 = 0.1
+s.meter
 
+//---------- hrame !
 
-
-~a = "kdflkjgl  ";
-~b = " i i i i i ";
-
-~a ++ ~b
-
-~t1 = ~a ++ ~a ++ ~b // concatenation
-~t1 = ~a ++ ~b  ++ ~b // concatenation
-
-~t1 = "dlkfjg  " ++ "dfkjl "
-
-String
-
-~t1 = "i"
 //-----012345679abcde
 ~t1 = "a b a a d f e " // 7/4 beat
+~t1 = "a b a a d f f " // 7/4 beat
+~t1 = "a b a a d f g " // 7/4 beat
+~t1 = "a b a a d f gf" // 7/4 beat
 ~t1 = "ijklmnopqrstuv"
 ~t1 = "abcdefghijklmnopqrstuvwxyz".scramble
 ~t1 = " " // ticho
