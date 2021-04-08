@@ -15,12 +15,9 @@
 		loop{
 			~t1.do({ |i|
 				var a = i.ascii;
-				// a.postln;
-				// 20.do({i.post});
+
 				if(a >= 97 and: {a <= 122} , { // male pismena = sample
-					Synth(\sp_mono, [\buf, ~b[a-97], \amp, 0.4 ] );
-
-
+					Synth(\sp_mono, [\buf, ~b[a-97], \amp, 0.05 ] );
 				});
 
 				if(a >= 65 and: {a <= 90} , { // velke pismena = synth

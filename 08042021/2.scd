@@ -2,12 +2,20 @@
 
 // vylepsena verzia ?
 
+
+
 //-- inicializacia ----------------------------------------------------//
 s.boot; // boot server
 
+// tu nechajte trochu casu
 "setup.scd".loadRelative  // cely program je dnu
 
 //---------------------------------------------------------------------//
+Tdef(\player1).stop
+
+Tdef(\player1).play
+
+
 
 s.meter
 
@@ -26,6 +34,11 @@ s.meter
 ~t1 = "abcdefghijklmnopqrstuvwxyz".scramble
 
 
+~t1 = "   "
+
+~t1 = "A B A Cc"
+
+
 // skus zmenit synthdef ktory pouziva nas player
 (
 
@@ -37,7 +50,7 @@ SynthDef(\sincu, {
 
 	// toto je 'hlavny' oscilator ( UGen ) zodpovedny za typ zvuku, skus zmenit za iny
 	// povodne bol SinOsc,
-	var sig = LFSaw.ar(
+	var sig = LFTri.ar(
 		(freq + [0,0.7]) + SinOsc.ar(MouseX.kr(20,20000)).range(-600,600)
 	) * amp *0.3 * env;
 
