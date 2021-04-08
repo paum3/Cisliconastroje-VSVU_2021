@@ -6,7 +6,8 @@
 (
 	~cas1 = 0.1; // defaultne nastavenie
 
-	// ~t1 = "a b a a d f e ";
+	// ~t1 = "a b A a d f e ";
+	// ~t1 = "A  A  B  a";
 	~t1 = " ";
 
 
@@ -14,18 +15,26 @@
 		loop{
 			~t1.do({ |i|
 				var a = i.ascii;
-				a.postln;
+				// a.postln;
 				// 20.do({i.post});
-				if(a >= 96 and: {a <= 122} , {
+				if(a >= 97 and: {a <= 122} , { // male pismena = sample
+					Synth(\sp_mono, [\buf, ~b[a-97], \amp, 0.4 ] );
+
+
+				});
+
+				if(a >= 65 and: {a <= 90} , { // velke pismena = synth
 					Synth(\sincu, [
-						\freq, (a - 96) * 100,
+						\freq, (a - 64) * 100,
 						\release, 1,
 						\attack, 0,
-						\amp, (a -96).reciprocal])
+						\amp, (a - 64).reciprocal])
+
+
 				});
+
 				~cas1.wait;
 			});
-				"".postln;
 		}
 	});
 
@@ -35,10 +44,11 @@
 
 // ~cas1
 // ~cas1 = 1
-// (96..122).asAscii // a - z
+// (97..122).asAscii // a - z
 
 // (48..57).asAscii // 0 - 9
 
+// (65..90).asAscii // A - Z
 
 
 // (
@@ -62,7 +72,6 @@
 // 	\ahoj.class
 // 	222
 // 	"string"
-
 
 
 

@@ -1,6 +1,6 @@
 // 2 ////////////////
 
-// vylepsena verzia
+// vylepsena verzia ?
 
 //-- inicializacia ----------------------------------------------------//
 s.boot; // boot server
@@ -11,20 +11,51 @@ s.boot; // boot server
 
 s.meter
 
+~t1 = "A  A  B  a";
 //---------- hrame !
 // charater zvuku sa meni ppoziciou mysy MouseX
 
 //-----012345679abcde
 ~t1 = "a b a a d f e " // 7/4 beat
 ~t1 = "a b a a d f f " // 7/4 beat
-~t1 = "a b a a d f g " // 7/4 beat
+~t1 = "a b A a d f G " // 7/4 beat
 ~t1 = "a b a a d f gf" // 7/4 beat
 ~t1 = "ijklmnopqrstuv"
+~t1 = "abcdefghijklmnopqrstuvwxyz"
+~t1 = "abcdefghijklmnopqrstuvwxyz".reverse
 ~t1 = "abcdefghijklmnopqrstuvwxyz".scramble
+
+
+// skus zmenit synthdef ktory pouziva nas player
+(
+
+SynthDef(\sincu, {
+	| freq = 100 attack=0.01 release=0.3 amp=0.2 |
+	// arg freq = 100, attack=0.01, release=0.3, amp=0.2;
+
+	var env = Env.perc(attack, release).kr(2);
+
+	// toto je 'hlavny' oscilator ( UGen ) zodpovedny za typ zvuku, skus zmenit za iny
+	// povodne bol SinOsc,
+	var sig = LFSaw.ar(
+		(freq + [0,0.7]) + SinOsc.ar(MouseX.kr(20,20000)).range(-600,600)
+	) * amp *0.3 * env;
+
+	var env_f = LFTri.kr(0.1, iphase: Rand(0,4.0)).range(300, 2600);
+	sig = RLPF.ar(sig, freq: SinOsc.ar(4).range(200, env_f), rq: 0.6);
+	sig = HPF.ar(sig, 100);
+	// sig = Pan2.ar(sig, Rand(-0.4,0.4));
+	Out.ar(0, sig * 0.3);
+}).add
+
+)
+
+
 ~t1 = " " // ticho
 ~t1 = "a b a a d fae "
-~t1 = "a b a aad fae "
+~t1 = "a b a aAd fAe "
 
+~t1 = "a A a A a A "
 ~t1 = "a r a aad fae "
 
 ~t1 = "b sadfl hp dfasidhf odif  "

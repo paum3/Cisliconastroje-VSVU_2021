@@ -19,9 +19,28 @@ SynthDef(\sincu, {
 	var env_f = LFTri.kr(0.1, iphase: Rand(0,4.0)).range(300, 2600);
 	sig = RLPF.ar(sig, freq: SinOsc.ar(4).range(200, env_f), rq: 0.6);
 	sig = HPF.ar(sig, 100);
-	sig = Pan2.ar(sig, Rand(-0.4,0.4));
 	Out.ar(0, sig * 0.6);
-}).add
+}).add;
+
+
+
+
+(
+SynthDef.new(\sp_mono,{
+      arg buf, out = 0, loop = 0, start = 0, len = 1, rate = 1, amp = 1, pan = 0, atk = 0.01, rel = 0.01 ;
+      var sig, env;
+      start = start * BufFrames.kr(buf);
+
+      len = len * BufFrames.kr(buf) / 44100;
+      env = EnvGen.kr( Env( [0,1,1,0], [atk, len ,rel], [3,0,-3] ) , doneAction:2);
+      sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf) * rate,startPos:start, loop:loop, doneAction:2);
+
+      sig = sig * env * amp;
+	  Out.ar(out, Pan2.ar(sig, pan) );
+}).add;
+)
+
+
 
 )
 
