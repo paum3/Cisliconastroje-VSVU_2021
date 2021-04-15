@@ -181,3 +181,7 @@ play{Blip.ar([16e3,16150],2,LFTri.ar(Duty.ar(LFNoise0.ar(0.2,4,6),0,Dseq([70,30,
 by 'block'
 
 {SinOsc.ar(65.41,0,(SinOsc.kr(0.5, 0,0.5)))+SinOsc.ar(130.81,0,(SinOsc.kr(10,0,0.5)))+SinOsc.ar(523.25,0,(SinOsc.kr(0.05,0,0.05)))}.play;//b
+
+
+//////////////////////////////
+// https://raw.githubusercontent.com/supercollider/supercollider/develop/examples/pieces/spacelab.scd
