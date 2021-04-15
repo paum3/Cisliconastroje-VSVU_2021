@@ -60,11 +60,21 @@ Ndef(\a, {  LFTri.ar(MouseX.kr(10,300)) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).
 Ndef(\a, {  LFTri.ar( LFPulse.kr(117).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
 
 // zmodulujem modulator
-Ndef(\a, {  LFTri.ar( LFPulse.kr(   ).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
+Ndef(\a, {  LFTri.ar( LFPulse.kr( LFNoise0.kr(2).range(2,50)  ).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
 
+Ndef(\a, {  LFTri.ar( LFPulse.kr( LFNoise2.kr(1).range(2,10)  ).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
+
+// zase iba freqkvencia
+Ndef(\a, {  LFTri.ar( LFNoise0.kr(4).range(20,100)    ) * SinOsc.ar(0.1).range(0.1,0.2) ! 2  }).play
+
+Ndef(\a, {  LFTri.ar( LFNoise1.kr(4).range(20,100)    ) * SinOsc.ar(0.1).range(0.1,0.2) ! 2  }).play
+
+Ndef(\a, {  LFTri.ar( LFNoise2.kr(4).range(20,100)    ) * SinOsc.ar(0.1).range(0.1,0.2) ! 2  }).play
+
+Ndef(\a).release(4)
 
 // ake mame sumy
- (
+(
 	 {
 		 var f = 10;
 		[
@@ -77,6 +87,45 @@ Ndef(\a, {  LFTri.ar( LFPulse.kr(   ).range(60,180)   ) * SinOsc.ar(0.1).range(0
 	}.plot(3)
 
 )
+
+
+
+(
+
+	Ndef(\a, {
+		LFSaw.ar(
+			freq: LFNoise0.kr( freq: 100 ).range(10,400)  // nahodna zmena frekvencie
+		)
+		* Line.kr(start: 0,end: 0.3, dur: 15)
+		! 2 // stereo
+	} ).play
+
+)
+
+
+
+Ndef(\a).release(4)
+
+
+
+// pridame filter
+
+(
+
+	Ndef(\a, {
+		var sig = LFSaw.ar( freq: LFNoise0.kr( freq: 100 ).range(10,400)) * Line.kr(start: 0,end: 0.3, dur: 15);
+		var lfo = SinOsc.kr(5); // low freqvency oscillator
+
+		sig = LPF.ar(in: sig, freq: lfo.range(50,500)  );
+
+		sig ! 2 // stereo
+	} ).play
+
+)
+
+
+
+Ndef(\a).release(4)
 
 
 
