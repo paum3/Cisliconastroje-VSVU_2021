@@ -76,3 +76,41 @@ Synth(\elecorgan)
 )
 
 Pbindef(\a).stop;
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+ (
+	SynthDef(\elecorgan2, {
+		arg freq=200, attack=0.1, release=0.1, amp=0.5;
+        var env = Env([0,1,0], [attack,release], [2,-4]).kr(2);
+		var sig = SinOsc.ar(freq * 1, mul: 1) +
+				  LFSaw.ar(freq * 2, mul: 0.2) +
+				  LFTri.ar(freq * 3, mul: 0.2) +
+				  PinkNoise.ar(0.5);
+		sig = sig * env * amp;
+		Out.ar(0,sig ! 2);
+	} ).add
+
+ )
+
+
+(
+	Pbindef(\a,
+		\instrument, \elecorgan2,
+		\degree, Pseq([1, 5, 3, 1, 6, 2, 5, 0, 3, 0, 2], inf),
+		\attack, 0.06,
+		\release, 0.9,
+		\dur, 0.2
+	).play;
+)
+
+Pbindef(\a).stop;
