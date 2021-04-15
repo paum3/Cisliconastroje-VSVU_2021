@@ -114,10 +114,10 @@ Ndef(\a).release(4)
 
 	Ndef(\a, {
 		var sig = LFSaw.ar( freq: LFNoise0.kr( freq: 100 ).range(10,400)) * Line.kr(start: 0,end: 0.3, dur: 15);
-		var lfo = SinOsc.kr(5); // low freqvency oscillator
-
-		sig = LPF.ar(in: sig, freq: lfo.range(50,500)  );
-
+		var lfo = LFPulse.ar(MouseX.kr(0.1,10) ); // low freqvency oscillator
+		sig = sig + PinkNoise.ar(0.1);
+		sig = LPF.ar(in: sig, freq: lfo.lag(0.2).range(50,1500)  ); // Low Pass Filter
+		// sig = HPF.ar(in: sig, freq: lfo.lag(0.2).range(50,1500)  );
 		sig ! 2 // stereo
 	} ).play
 
@@ -125,8 +125,30 @@ Ndef(\a).release(4)
 
 
 
-Ndef(\a).release(4)
+Ndef(\a).release(2)
 
+
+
+// FM - frequency modulation
+(
+
+
+	Ndef(\a,{
+
+		var trig = Impulse.kr(5);
+		var seq1 = Drand([72, 75, 79, 82]-12, inf).midicps;
+		var seq2 = Dseq([72, 75, 79, Drand([82,84,86])], inf).midicps;
+		var freq = Demand.kr(trig, 0, [seq1, seq2]);
+
+		var mod = LFTri.ar(400).range(-150,150);
+		var sig = SinOsc.ar(freq + mod )  * 0.1;
+
+		sig * 0.5
+	}).play
+
+)
+
+Ndef(\a).release(20)
 
 
 
