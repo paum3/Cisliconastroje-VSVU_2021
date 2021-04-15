@@ -25,6 +25,68 @@ attack
  ------------------------------------------------------------------------
  s.boot
 
+ s.scope
+
+
+
+
+
+
+
+
+ (
+	 {
+		 var f = 10;
+		[
+			SinOsc.ar(f),
+			LFTri.ar(f),
+			LFSaw.ar(f),
+			LFPulse.ar(f),
+			WhiteNoise.ar
+
+		]
+	}.plot(3)
+
+)
+
+// beating
+Ndef(\a, { (SinOsc.ar(200) + SinOsc.ar(MouseX.kr(198,202)))  * 0.1 ! 2 }).play
+
+
+// amplituda LFTri ovplyvnovana SinOSc
+Ndef(\a, {  LFTri.ar(MouseX.kr(10,300)) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
+
+// aj freqkvencia
+Ndef(\a, {  LFTri.ar( LFPulse.kr(117).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
+
+// zmodulujem modulator
+Ndef(\a, {  LFTri.ar( LFPulse.kr(   ).range(60,180)   ) * SinOsc.ar(0.1).range(0.0,0.1) ! 2  }).play
+
+
+// ake mame sumy
+ (
+	 {
+		 var f = 10;
+		[
+			WhiteNoise.ar,
+			LFNoise0.ar(f),
+			LFNoise1.ar(f),
+			LFNoise2.ar(f)
+
+		]
+	}.plot(3)
+
+)
+
+
+
+
+
+
+
+
+
+
  ADITIVNA SYNTEZA
 
  FreqScope.new(500, 300);
