@@ -22,11 +22,13 @@ Teším sa na stretnutie.
 
 fero király
 
+Semináre počítačovej hudby Číslosconástroje sú súčasťou celoročného projektu ooo_2021, ktorý z verejných zdrojov ako hlavný partner podporil Fond na podporu umenia. Ďakujeme!
+
 
 
 dátumy
 ------
 
 - [x] [1. apríl 09oo-12oo] - I.
-- [ ] [8. apríl 09oo-12oo] - II.
-- [ ] [15. apríl 09oo-12oo] - III.
+- [x] [8. apríl 09oo-12oo] - II.
+- [x] [15. apríl 09oo-12oo] - III.
